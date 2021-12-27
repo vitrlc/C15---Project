@@ -105,14 +105,20 @@ function draw() {
           score=score+4
       }
 
-      if (gameState = END) {
-
-        bow.destroyEach()
-        backgroundImage.velocityX = 0;
+      if (bowImage.isTouching(redBalloon)) {
+            redB.destroyEach()
+            background.velocityX = 0;
+            
       }
-                                                
 
-       } 
+      if (gameState == END){
+
+            bow.destroyEach()
+            backgroundImage.velocityX = 0;
+
+      }
+         }
+       
    
 
   
@@ -179,3 +185,5 @@ function   pinkBalloon() {
                   arrowGroup.add(arrow)
                    return arrow;
  }
+
+ 
